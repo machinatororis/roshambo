@@ -13,6 +13,11 @@ namespace Roshambo
     {
         string userFigure = "";
         string compFigure = "";
+
+        int score_wins = 0;
+        int score_lose = 0;
+        int score_draw = 0;
+
         Random rand = new Random();
 
         public Form1()
@@ -56,9 +61,57 @@ namespace Roshambo
             if (figure == 3) showCompFigure("Paper");
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        void showScore()
         {
+            labelScore.Text = 
+                "Wins: " + score_wins.ToString() + 
+                "  Lose: " + score_lose.ToString() +
+                "  Draw: " + score_draw.ToString();
+        }
 
+        private void pictureBoxUser_MouseClick(object sender, MouseEventArgs e)
+        {
+            checkResult();
+        }
+
+        private void checkResult()
+        {
+            int wins = 0;
+            int lose = 0;
+            int draw = 0;
+
+            if (userFigure == compFigure)
+                draw = 1;
+            else
+            {
+                if (userFigure == "Rock")
+                    if (compFigure == "Scissors")
+                        wins = 1;
+                    else
+                        lose = 1;
+
+                if (userFigure == "Scissors")
+                    if (compFigure == "Paper")
+                        wins = 1;
+                    else
+                        lose = 1;
+
+                if (userFigure == "Paper")
+                    if (compFigure == "Rock")
+                        wins = 1;
+                    else
+                        lose = 1;
+            }
+            score_wins += wins;
+            score_lose += lose;
+            score_draw += draw;
+
+            if (wins > 0)
+                labelMessage.Text = "Win!";
+            if (lose > 0)
+                labelMessage.Text = "Lose :(";
+            if (draw > 0)
+                labelMessage.Text = "Draw. Try again";
         }
     }
 }

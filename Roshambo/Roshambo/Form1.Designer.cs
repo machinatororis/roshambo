@@ -79,6 +79,7 @@
             this.pictureBoxRockUser.TabStop = false;
             this.pictureBoxRockUser.Tag = "";
             this.pictureBoxRockUser.Visible = false;
+            this.pictureBoxRockUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxUser_MouseClick);
             // 
             // userPanelScissors
             // 
@@ -102,6 +103,7 @@
             this.pictureBoxScissorsUser.TabIndex = 6;
             this.pictureBoxScissorsUser.TabStop = false;
             this.pictureBoxScissorsUser.Visible = false;
+            this.pictureBoxScissorsUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxUser_MouseClick);
             // 
             // userPanelPaper
             // 
@@ -124,6 +126,7 @@
             this.pictureBoxPaperUser.TabIndex = 5;
             this.pictureBoxPaperUser.TabStop = false;
             this.pictureBoxPaperUser.Visible = false;
+            this.pictureBoxPaperUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxUser_MouseClick);
             // 
             // panel4
             // 
@@ -191,7 +194,6 @@
             this.labelMessage.TabIndex = 4;
             this.labelMessage.Text = "Выбери свою фигуру!";
             this.labelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelMessage.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelComp
             // 
@@ -212,7 +214,6 @@
             this.labelScore.Name = "labelScore";
             this.labelScore.Size = new System.Drawing.Size(724, 43);
             this.labelScore.TabIndex = 6;
-            this.labelScore.Text = "label3";
             this.labelScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
@@ -227,6 +228,7 @@
             this.Controls.Add(this.userPanelPaper);
             this.Controls.Add(this.userPanelScissors);
             this.Controls.Add(this.userPanelRock);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
