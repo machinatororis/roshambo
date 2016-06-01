@@ -23,6 +23,7 @@ namespace Roshambo
         public Form1()
         {
             InitializeComponent();
+            showScore();
         }
 
         private void showUserFigure(string figure)
@@ -63,8 +64,8 @@ namespace Roshambo
 
         void showScore()
         {
-            labelScore.Text = 
-                "Wins: " + score_wins.ToString() + 
+            labelScore.Text =
+                "Wins: " + score_wins.ToString() +
                 "  Lose: " + score_lose.ToString() +
                 "  Draw: " + score_draw.ToString();
         }

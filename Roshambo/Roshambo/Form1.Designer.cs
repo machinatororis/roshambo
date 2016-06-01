@@ -187,29 +187,29 @@
             // labelMessage
             // 
             this.labelMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMessage.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMessage.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMessage.Location = new System.Drawing.Point(12, 19);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(423, 40);
             this.labelMessage.TabIndex = 4;
-            this.labelMessage.Text = "Выбери свою фигуру!";
+            this.labelMessage.Text = "Choose your figure!";
             this.labelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelComp
             // 
             this.labelComp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelComp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelComp.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelComp.Location = new System.Drawing.Point(615, 19);
             this.labelComp.Name = "labelComp";
             this.labelComp.Size = new System.Drawing.Size(120, 40);
             this.labelComp.TabIndex = 5;
-            this.labelComp.Text = "Рука компьютера";
+            this.labelComp.Text = "Computer";
             this.labelComp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelScore
             // 
             this.labelScore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelScore.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelScore.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelScore.Location = new System.Drawing.Point(11, 238);
             this.labelScore.Name = "labelScore";
             this.labelScore.Size = new System.Drawing.Size(724, 43);
@@ -232,7 +232,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Камень-Ножницы-Бумага";
+            this.Text = "Roshambo";
             this.userPanelRock.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRockUser)).EndInit();
             this.userPanelScissors.ResumeLayout(false);
