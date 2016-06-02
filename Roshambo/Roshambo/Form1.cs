@@ -87,7 +87,10 @@ namespace Roshambo
 
         private void pictureBoxUser_MouseClick(object sender, MouseEventArgs e)
         {
-            checkResult();
+            if (mode == "game")
+                checkResult();
+            else
+                startGame();
         }
 
         private void checkResult()

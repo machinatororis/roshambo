@@ -190,6 +190,7 @@
             // 
             // labelMessage
             // 
+            this.labelMessage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelMessage.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMessage.Location = new System.Drawing.Point(12, 19);
@@ -201,8 +202,10 @@
             // 
             // labelComp
             // 
+            this.labelComp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.labelComp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelComp.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelComp.ImageKey = "(отсутствует)";
             this.labelComp.Location = new System.Drawing.Point(615, 19);
             this.labelComp.Name = "labelComp";
             this.labelComp.Size = new System.Drawing.Size(120, 40);
@@ -212,6 +215,7 @@
             // 
             // labelScore
             // 
+            this.labelScore.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.labelScore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelScore.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelScore.Location = new System.Drawing.Point(11, 238);
