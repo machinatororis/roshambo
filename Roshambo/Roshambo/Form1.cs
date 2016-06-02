@@ -18,6 +18,8 @@ namespace Roshambo
         int score_lose = 0;
         int score_draw = 0;
 
+        string mode = "show"; //show, game
+
         Random rand = new Random();
 
         public Form1()
@@ -26,8 +28,19 @@ namespace Roshambo
             showScore();
         }
 
+        private void startGame()
+        {
+            if (mode != "game")
+            {
+                mode = "game";
+                labelMessage.Text = "Choose your figure!";
+            }
+        }
+
         private void showUserFigure(string figure)
         {
+            startGame();
+
             pictureBoxRockUser.Visible = figure == "Rock";
             pictureBoxScissorsUser.Visible = figure == "Scissors";
             pictureBoxPaperUser.Visible = figure == "Paper";
@@ -50,7 +63,8 @@ namespace Roshambo
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            compRandomFigure();
+            if (mode == "game")
+                compRandomFigure();
         }
 
         private void compRandomFigure()
@@ -77,6 +91,7 @@ namespace Roshambo
 
         private void checkResult()
         {
+            mode = "show";
             int wins = 0;
             int lose = 0;
             int draw = 0;
