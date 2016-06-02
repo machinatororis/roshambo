@@ -26,6 +26,7 @@ namespace Roshambo
         {
             InitializeComponent();
             showScore();
+            setCompSpeed();
         }
 
         private void startGame()
@@ -128,6 +129,21 @@ namespace Roshambo
                 labelMessage.Text = "Lose :(";
             if (draw > 0)
                 labelMessage.Text = "Draw. Try again";
+            showScore();
+        }
+
+        private void setCompSpeed()
+        {
+            if (trackBarSpeed.Value == 1) timer.Interval = 400;
+            if (trackBarSpeed.Value == 2) timer.Interval = 300;
+            if (trackBarSpeed.Value == 3) timer.Interval = 200;
+            if (trackBarSpeed.Value == 4) timer.Interval = 100;
+            if (trackBarSpeed.Value == 5) timer.Interval = 50;
+        }
+
+        private void trackBarSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            setCompSpeed();
         }
     }
 }

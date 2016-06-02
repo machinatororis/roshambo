@@ -44,6 +44,9 @@
             this.labelMessage = new System.Windows.Forms.Label();
             this.labelComp = new System.Windows.Forms.Label();
             this.labelScore = new System.Windows.Forms.Label();
+            this.trackBarSpeed = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.userPanelRock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRockUser)).BeginInit();
             this.userPanelScissors.SuspendLayout();
@@ -54,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRockComp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPaperComp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScissorsComp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // userPanelRock
@@ -181,7 +185,7 @@
             // timer
             // 
             this.timer.Enabled = true;
-            this.timer.Interval = 300;
+            this.timer.Interval = 30;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // labelMessage
@@ -216,11 +220,47 @@
             this.labelScore.TabIndex = 6;
             this.labelScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // trackBarSpeed
+            // 
+            this.trackBarSpeed.LargeChange = 1;
+            this.trackBarSpeed.Location = new System.Drawing.Point(568, 81);
+            this.trackBarSpeed.Maximum = 5;
+            this.trackBarSpeed.Minimum = 1;
+            this.trackBarSpeed.Name = "trackBarSpeed";
+            this.trackBarSpeed.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBarSpeed.Size = new System.Drawing.Size(45, 119);
+            this.trackBarSpeed.TabIndex = 7;
+            this.trackBarSpeed.Value = 3;
+            this.trackBarSpeed.ValueChanged += new System.EventHandler(this.trackBarSpeed_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(565, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Hell";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(565, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Eazy";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 299);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.trackBarSpeed);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.labelComp);
             this.Controls.Add(this.labelMessage);
@@ -243,7 +283,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRockComp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPaperComp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScissorsComp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,6 +305,9 @@
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Label labelComp;
         private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.TrackBar trackBarSpeed;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
