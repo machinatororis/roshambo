@@ -1,5 +1,5 @@
 # roshambo
-Игра камень-ножницы-бумага
+Rock-Paper-Scissors Game
 
 IDE: Microsoft Visual Studio 2010
 
